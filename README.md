@@ -34,7 +34,16 @@ npm run preview  # prévisualise le build
 **En ligne :** le workflow `.github/workflows/deploy.yml` publie le site sur
 GitHub Pages à chaque push. Pour l'activer, une seule chose à faire dans
 l'interface GitHub : `Settings` › `Pages` › `Source` › **GitHub Actions**.
-Le site est ensuite servi sur `https://infozen-git.github.io/Portfolio/`.
+Tant que ce réglage n'est pas exactement sur « GitHub Actions », l'étape de
+déploiement échoue avec une erreur 404, même si le build a réussi.
+
+Le workflow déduit tout seul le chemin de base à partir du nom du dépôt, donc
+un renommage ne casse rien :
+
+| Nom du dépôt              | URL du site                                        |
+| ------------------------- | -------------------------------------------------- |
+| `infozen-git.github.io`   | `https://infozen-git.github.io/`                     |
+| n'importe quel autre nom  | `https://infozen-git.github.io/<nom-du-depot>/`      |
 
 ## Structure
 
