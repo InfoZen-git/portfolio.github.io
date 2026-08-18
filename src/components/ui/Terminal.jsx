@@ -48,9 +48,9 @@ export default function Terminal({ title = 'octave@infozen', lines = [], classNa
       className={`overflow-hidden rounded-2xl border border-white/8 bg-abyss/80 shadow-2xl shadow-black/50 backdrop-blur-xl ${className}`}
     >
       <div className="flex items-center gap-2 border-b border-white/5 bg-white/[0.03] px-4 py-3">
-        <span className="size-3 rounded-full bg-red-500/70" />
-        <span className="size-3 rounded-full bg-amber-400/70" />
-        <span className="size-3 rounded-full bg-emerald-400/70" />
+        <span className="size-3 rounded-full bg-white/15" />
+        <span className="size-3 rounded-full bg-white/15" />
+        <span className="size-3 rounded-full bg-white/15" />
         <span className="ml-2 font-mono text-xs text-slate-500">{title}</span>
       </div>
 
@@ -68,8 +68,8 @@ export default function Terminal({ title = 'octave@infozen', lines = [], classNa
               variants={lineVariants}
               className="flex flex-wrap items-baseline gap-x-2"
             >
-              <span className="text-accent">➜</span>
-              <span className="text-electric">{line.prompt}</span>
+              <span className="text-slate-600">$</span>
+              <span className="text-accent/80">{line.prompt}</span>
               <TypedText text={line.command} className="text-slate-200" />
             </motion.p>
           ) : (
@@ -81,7 +81,7 @@ export default function Terminal({ title = 'octave@infozen', lines = [], classNa
 
         <motion.span
           variants={outputVariants}
-          className="inline-block h-4 w-2 translate-y-0.5 animate-blink bg-accent"
+          className="inline-block h-4 w-2 translate-y-0.5 animate-blink bg-slate-500"
           aria-hidden="true"
         />
       </motion.div>

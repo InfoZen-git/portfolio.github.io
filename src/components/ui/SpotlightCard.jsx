@@ -30,8 +30,8 @@ export default function SpotlightCard({
   const rotateX = useSpring(useMotionValue(0), { stiffness: 220, damping: 22 })
   const rotateY = useSpring(useMotionValue(0), { stiffness: 220, damping: 22 })
 
-  const background = useMotionTemplate`radial-gradient(420px circle at ${mouseX}% ${mouseY}%, color-mix(in oklab, ${accent} 18%, transparent), transparent 70%)`
-  const border = useMotionTemplate`radial-gradient(320px circle at ${mouseX}% ${mouseY}%, color-mix(in oklab, ${accent} 65%, transparent), transparent 75%)`
+  const background = useMotionTemplate`radial-gradient(420px circle at ${mouseX}% ${mouseY}%, color-mix(in oklab, ${accent} 12%, transparent), transparent 70%)`
+  const border = useMotionTemplate`radial-gradient(320px circle at ${mouseX}% ${mouseY}%, color-mix(in oklab, ${accent} 45%, transparent), transparent 75%)`
 
   function handlePointerMove(event) {
     if (reduceMotion || !ref.current) return
@@ -78,7 +78,7 @@ export default function SpotlightCard({
       {/* Reflet haut */}
       <span
         aria-hidden="true"
-        className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-px bg-gradient-to-r from-transparent via-white/25 to-transparent"
+        className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-px bg-gradient-to-r from-transparent via-white/15 to-transparent"
       />
       {children}
     </Component>

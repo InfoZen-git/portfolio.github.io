@@ -72,12 +72,12 @@ export default function About() {
               transition={{ type: 'spring', stiffness: 320, damping: 24 }}
               className="group relative overflow-hidden rounded-2xl border border-white/8 bg-panel/40 p-6 backdrop-blur-xl"
             >
-              <span className="pointer-events-none absolute inset-x-0 -top-24 h-40 bg-accent/12 opacity-0 blur-3xl transition-opacity duration-500 group-hover:opacity-100" />
+              <span className="pointer-events-none absolute inset-x-0 -top-24 h-40 bg-white/6 opacity-0 blur-3xl transition-opacity duration-500 group-hover:opacity-100" />
 
               <motion.span
                 whileHover={{ rotate: -8, scale: 1.08 }}
                 transition={{ type: 'spring', stiffness: 400, damping: 15 }}
-                className="mb-5 flex size-11 items-center justify-center rounded-xl border border-accent/20 bg-accent/10 text-accent"
+                className="mb-5 flex size-11 items-center justify-center rounded-xl border border-white/8 bg-white/[0.03] text-accent"
               >
                 <Icon className="size-5" />
               </motion.span>
@@ -91,7 +91,7 @@ export default function About() {
                 whileInView={{ scaleX: 1 }}
                 viewport={viewportOnce}
                 transition={{ duration: 0.8, ease: easeOut, delay: 0.2 }}
-                className="absolute inset-x-6 bottom-0 h-px origin-left bg-gradient-to-r from-accent/50 to-transparent"
+                className="absolute inset-x-6 bottom-0 h-px origin-left bg-white/10"
               />
             </motion.li>
           )

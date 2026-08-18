@@ -3,8 +3,9 @@
 Site portfolio personnel d'Octave (**InfoZen**) : créateur de contenu tech,
 développeur, passionné de homelab et entrepreneur.
 
-Thème sombre, accent cyan / bleu électrique, animations Framer Motion partout
-(entrée de page, révélations au scroll, halo qui suit le curseur, cascades).
+Thème sombre neutre, un seul accent bleu acier employé par petites touches,
+animations Framer Motion partout (entrée de page, révélations au scroll, halo
+qui suit le curseur, cascades).
 
 ## Stack
 
@@ -81,6 +82,22 @@ Le champ `visual` d'un projet référence un composant de
 Les jetons de design (couleurs, polices, animations) sont regroupés dans le bloc
 `@theme` en haut de `src/index.css`. Changer `--color-accent` suffit à re-teinter
 tout le site.
+
+La palette suit une règle simple : les surfaces sont neutres, un seul accent
+existe, et il ne sert que par petites touches (numéros de section, quelques
+icônes, la marque). Les boutons principaux sont des aplats clairs, pas des
+dégradés colorés, et aucune ombre n'est teintée. C'est ce qui distingue un
+rendu sobre d'un rendu criard.
+
+| Jeton                 | Rôle                                    |
+| --------------------- | --------------------------------------- |
+| `--color-void`        | Fond de page                            |
+| `--color-abyss`       | Surfaces surélevées                     |
+| `--color-panel`       | Cartes                                  |
+| `--color-hairline`    | Séparateurs                             |
+| `--color-accent`      | Accent, par petites touches uniquement  |
+| `--color-accent-deep` | Variante sombre du même bleu            |
+| `--color-success`     | Statut « en ligne » et « en cours »     |
 
 ## Accessibilité et performance
 

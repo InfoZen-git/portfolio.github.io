@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { AnimatePresence, motion, useMotionValueEvent, useScroll } from 'framer-motion'
 import { Menu, X } from 'lucide-react'
-import { nav, profile } from '../../data/site'
+import { nav } from '../../data/site'
 import useActiveSection from '../../hooks/useActiveSection'
 import { easeOut } from '../../lib/motion'
 
@@ -30,15 +30,12 @@ export default function Navbar() {
               : 'border-transparent bg-transparent'
           }`}
         >
+          {/* Simple signature typographique : pas de bloc logo. */}
           <a
             href="#hero"
-            className="group flex items-center gap-2.5 font-display text-sm font-semibold tracking-tight text-white"
+            className="font-display text-[15px] font-semibold tracking-tight text-white transition-colors duration-300 hover:text-slate-300"
           >
-            <span className="relative flex size-8 items-center justify-center rounded-lg bg-gradient-to-br from-accent to-electric text-void">
-              <span className="font-display text-sm font-bold">Z</span>
-              <span className="absolute inset-0 rounded-lg bg-accent/40 opacity-0 blur-md transition-opacity duration-300 group-hover:opacity-100" />
-            </span>
-            {profile.brand}
+            Info<span className="text-accent">Zen</span>
           </a>
 
           <ul className="hidden items-center gap-1 md:flex">
@@ -54,7 +51,7 @@ export default function Navbar() {
                     <motion.span
                       layoutId="nav-active"
                       transition={{ type: 'spring', stiffness: 320, damping: 30 }}
-                      className="absolute inset-0 -z-10 rounded-full border border-accent/25 bg-accent/10"
+                      className="absolute inset-0 -z-10 rounded-full border border-white/10 bg-white/[0.06]"
                     />
                   )}
                   {item.label}
@@ -68,7 +65,7 @@ export default function Navbar() {
               href="#contact"
               whileHover={{ scale: 1.04 }}
               whileTap={{ scale: 0.96 }}
-              className="hidden rounded-full border border-accent/30 bg-accent/10 px-4 py-1.5 text-sm font-medium text-accent transition-colors duration-300 hover:bg-accent/20 sm:block"
+              className="hidden rounded-full border border-white/12 px-4 py-1.5 text-sm font-medium text-slate-300 transition-colors duration-300 hover:border-white/25 hover:text-white sm:block"
             >
               Me contacter
             </motion.a>
@@ -129,7 +126,7 @@ export default function Navbar() {
                   <a
                     href={`#${item.id}`}
                     onClick={() => setMenuOpen(false)}
-                    className="block w-full rounded-xl border border-white/5 px-6 py-4 text-center font-display text-2xl font-medium text-slate-200 transition-colors duration-300 hover:border-accent/30 hover:text-accent"
+                    className="block w-full rounded-xl border border-white/5 px-6 py-4 text-center font-display text-2xl font-medium text-slate-200 transition-colors duration-300 hover:border-white/20 hover:text-white"
                   >
                     {item.label}
                   </a>

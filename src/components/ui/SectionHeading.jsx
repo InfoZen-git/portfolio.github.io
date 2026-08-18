@@ -17,7 +17,7 @@ export default function SectionHeading({ index, eyebrow, title, description, ali
     >
       <motion.div variants={fadeUp} className="flex items-center gap-3">
         {index && (
-          <span className="font-mono text-xs tracking-[0.25em] text-accent/70">{index}</span>
+          <span className="font-mono text-xs tracking-[0.25em] text-accent">{index}</span>
         )}
         <span className="text-xs font-medium tracking-[0.25em] text-slate-500 uppercase">
           {eyebrow}
@@ -28,7 +28,7 @@ export default function SectionHeading({ index, eyebrow, title, description, ali
           whileInView={{ scaleX: 1 }}
           viewport={viewportOnce}
           transition={{ duration: 0.9, ease: easeOut, delay: 0.15 }}
-          className="h-px w-16 origin-left bg-gradient-to-r from-accent/70 to-transparent sm:w-24"
+          className="h-px w-16 origin-left bg-white/15 sm:w-24"
         />
       </motion.div>
 

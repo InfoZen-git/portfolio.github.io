@@ -15,18 +15,18 @@ const spans = {
 const statuses = {
   active: {
     label: 'En cours',
-    className: 'border-emerald-400/20 bg-emerald-400/10 text-emerald-400',
-    dot: 'bg-emerald-400',
+    className: 'border-white/8 text-slate-400',
+    dot: 'bg-success',
   },
   soon: {
     label: 'À venir',
-    className: 'border-accent/25 bg-accent/10 text-accent',
+    className: 'border-white/8 text-slate-400',
     dot: 'bg-accent',
   },
   past: {
     label: 'Terminé',
-    className: 'border-white/8 bg-white/[0.03] text-slate-500',
-    dot: 'bg-slate-500',
+    className: 'border-white/8 text-slate-600',
+    dot: 'bg-slate-600',
   },
 }
 
@@ -57,20 +57,20 @@ function VentureCard({ venture, index }) {
           <motion.span
             whileHover={{ rotate: -8, scale: 1.08 }}
             transition={{ type: 'spring', stiffness: 400, damping: 15 }}
-            className="flex size-11 items-center justify-center rounded-xl border border-accent/20 bg-accent/10 text-accent"
+            className="flex size-11 items-center justify-center rounded-xl border border-white/8 bg-white/[0.03] text-accent"
           >
             <Icon className="size-5" />
           </motion.span>
 
           <span
-            className={`inline-flex items-center gap-1.5 rounded-full border px-2.5 py-1 font-mono text-[10px] tracking-wider uppercase ${status.className}`}
+            className={`inline-flex shrink-0 items-center gap-1.5 rounded-full border px-2.5 py-1 font-mono text-[10px] tracking-wider uppercase ${status.className}`}
           >
             <span className={`size-1.5 rounded-full ${status.dot}`} />
             {status.label}
           </span>
         </div>
 
-        <p className="mt-5 font-mono text-[11px] tracking-[0.2em] text-accent/70 uppercase">
+        <p className="mt-5 font-mono text-[11px] tracking-[0.2em] text-slate-500 uppercase">
           {venture.kind}
         </p>
         <h3 className="mt-2 font-display text-lg font-semibold text-white text-balance sm:text-xl">

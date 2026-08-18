@@ -70,7 +70,7 @@ export default function ParticleField({ density = 0.00009, className = '' }) {
 
         context.beginPath()
         context.arc(particle.x, particle.y, particle.r, 0, Math.PI * 2)
-        context.fillStyle = 'rgba(103, 232, 249, 0.55)'
+        context.fillStyle = 'rgba(148, 163, 184, 0.32)'
         context.fill()
       }
 
@@ -82,11 +82,11 @@ export default function ParticleField({ density = 0.00009, className = '' }) {
           const distanceSquared = dx * dx + dy * dy
           if (distanceSquared > 130 * 130) continue
 
-          const alpha = (1 - Math.sqrt(distanceSquared) / 130) * 0.22
+          const alpha = (1 - Math.sqrt(distanceSquared) / 130) * 0.1
           context.beginPath()
           context.moveTo(particles[i].x, particles[i].y)
           context.lineTo(particles[j].x, particles[j].y)
-          context.strokeStyle = `rgba(34, 211, 238, ${alpha})`
+          context.strokeStyle = `rgba(148, 163, 184, ${alpha})`
           context.lineWidth = 0.6
           context.stroke()
         }

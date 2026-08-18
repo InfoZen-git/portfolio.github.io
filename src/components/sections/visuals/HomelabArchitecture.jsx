@@ -4,8 +4,8 @@ import { easeOut, viewportOnce } from '../../../lib/motion'
 
 const tones = {
   accent: 'var(--color-accent)',
-  electric: 'var(--color-electric)',
-  muted: '#64748b',
+  electric: 'var(--color-accent-deep)',
+  muted: '#4b5563',
 }
 
 const { nodes, links, groups } = homelab
@@ -80,7 +80,7 @@ function Diagram() {
               <motion.path
                 d={d}
                 fill="none"
-                stroke={link.dashed ? 'var(--color-electric)' : 'var(--color-accent)'}
+                stroke="var(--color-accent)"
                 strokeWidth="1.8"
                 strokeLinecap="round"
                 strokeDasharray="7 110"
@@ -177,7 +177,7 @@ function GroupList() {
           className="rounded-xl border border-white/6 bg-white/[0.02] p-4"
         >
           <p className="font-display text-sm font-semibold text-slate-200">{group.title}</p>
-          <p className="mt-0.5 font-mono text-[11px] text-accent/70">{group.subtitle}</p>
+          <p className="mt-0.5 font-mono text-[11px] text-slate-500">{group.subtitle}</p>
 
           <ul className="mt-3 flex flex-wrap gap-1.5">
             {group.items.map((item, itemIndex) => (

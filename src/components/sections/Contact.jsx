@@ -33,7 +33,7 @@ export default function Contact() {
             <motion.div variants={fadeUp}>
               <MagneticButton
                 href={`mailto:${profile.email}`}
-                className="group inline-flex items-center gap-3 rounded-full bg-gradient-to-r from-accent to-electric px-7 py-3.5 text-sm font-semibold text-void shadow-xl shadow-accent/20"
+                className="group inline-flex items-center gap-3 rounded-full bg-slate-100 px-7 py-3.5 text-sm font-semibold text-void transition-colors duration-300 hover:bg-white"
               >
                 <Mail className="size-4" />
                 {profile.email}
@@ -73,7 +73,7 @@ export default function Contact() {
                     <MagneticButton
                       href={social.href}
                       strength={0.25}
-                      className="group inline-flex items-center gap-2.5 rounded-full border border-white/8 bg-white/[0.03] px-5 py-2.5 text-sm text-slate-300 backdrop-blur-md transition-colors duration-300 hover:border-accent/40 hover:text-accent"
+                      className="group inline-flex items-center gap-2.5 rounded-full border border-white/8 px-5 py-2.5 text-sm text-slate-400 transition-colors duration-300 hover:border-white/20 hover:text-slate-100"
                     >
                       <Icon className="size-4" />
                       {social.label}

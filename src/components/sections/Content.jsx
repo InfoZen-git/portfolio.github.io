@@ -41,7 +41,7 @@ export default function Content() {
               variants={cardVariants}
               className="h-full"
             >
-              <SpotlightCard accent={channel.accent} className="h-full">
+              <SpotlightCard className="h-full">
                 <a
                   href={channel.href}
                   target="_blank"
@@ -52,12 +52,10 @@ export default function Content() {
                     <motion.span
                       whileHover={{ rotate: -6, scale: 1.06 }}
                       transition={{ type: 'spring', stiffness: 400, damping: 14 }}
-                      className="flex size-12 items-center justify-center rounded-xl border transition-colors duration-500"
-                      style={{
-                        color: channel.accent,
-                        borderColor: `color-mix(in oklab, ${channel.accent} 30%, transparent)`,
-                        backgroundColor: `color-mix(in oklab, ${channel.accent} 12%, transparent)`,
-                      }}
+                      // La couleur de marque n'apparaît qu'au survol : au repos
+                      // la grille reste monochrome.
+                      className="flex size-12 items-center justify-center rounded-xl border border-white/8 bg-white/[0.03] text-slate-400 transition-colors duration-500 group-hover:[color:var(--brand)]"
+                      style={{ '--brand': channel.accent }}
                     >
                       <Icon className="size-5" />
                     </motion.span>
@@ -68,10 +66,7 @@ export default function Content() {
                   <h3 className="mt-5 font-display text-lg font-semibold text-white">
                     {channel.name}
                   </h3>
-                  <p
-                    className="mt-1 font-mono text-xs tracking-wide"
-                    style={{ color: channel.accent }}
-                  >
+                  <p className="mt-1 font-mono text-xs tracking-wide text-slate-500">
                     {channel.handle}
                   </p>
                   <p className="mt-3 text-sm leading-relaxed text-slate-400">

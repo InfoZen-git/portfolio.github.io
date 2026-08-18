@@ -14,7 +14,7 @@ export default function Marquee({ items, speed = 38, className = '' }) {
             {items.map((item) => (
               <li
                 key={item}
-                className="rounded-full border border-white/8 bg-panel/60 px-4 py-2 font-mono text-xs whitespace-nowrap text-slate-400 transition-colors duration-300 hover:border-accent/40 hover:text-accent"
+                className="rounded-full border border-white/8 bg-panel/60 px-4 py-2 font-mono text-xs whitespace-nowrap text-slate-400 transition-colors duration-300 hover:border-white/20 hover:text-slate-200"
               >
                 {item}
               </li>

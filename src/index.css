@@ -4,16 +4,19 @@
    Design tokens : tweak these to re-skin the whole site.
 ------------------------------------------------------------------ */
 @theme {
-  /* Surfaces */
-  --color-void: #04060c;
-  --color-abyss: #070b14;
-  --color-panel: #0b1120;
-  --color-hairline: #1c2740;
+  /* Surfaces : neutres, très légèrement froides, sans dominante saturée */
+  --color-void: #0b0c0e;
+  --color-abyss: #101115;
+  --color-panel: #16171c;
+  --color-hairline: #24262d;
 
-  /* Accents */
-  --color-accent: #22d3ee;
-  --color-accent-soft: #67e8f9;
-  --color-electric: #3b82f6;
+  /* Un seul accent, bleu acier désaturé, employé par petites touches */
+  --color-accent: #7aa2c8;
+  --color-accent-soft: #a5c2dc;
+  --color-accent-deep: #3d5a78;
+
+  /* Sémantique */
+  --color-success: #6ea583;
 
   /* Typography */
   --font-display: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
@@ -74,7 +77,7 @@
   }
 
   ::selection {
-    @apply bg-accent/25 text-white;
+    @apply bg-accent/30 text-white;
   }
 
   /* Scrollbar */
@@ -124,17 +127,6 @@
 /* ------------------------------------------------------------------
    Reusable component classes
 ------------------------------------------------------------------ */
-@utility text-gradient {
-  background-image: linear-gradient(
-    110deg,
-    var(--color-accent-soft) 0%,
-    var(--color-accent) 40%,
-    var(--color-electric) 100%
-  );
-  background-clip: text;
-  color: transparent;
-}
-
 @utility mask-fade-x {
   mask-image: linear-gradient(to right, transparent, black 12%, black 88%, transparent);
 }

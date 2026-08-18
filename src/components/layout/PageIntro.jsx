@@ -37,12 +37,15 @@ export default function PageIntro() {
             transition={{ duration: 0.6, ease: easeOut }}
             className="flex flex-col items-center gap-4"
           >
-            <span className="flex size-14 items-center justify-center rounded-2xl bg-gradient-to-br from-accent to-electric font-display text-2xl font-bold text-void">
-              Z
+            <span className="font-display text-2xl font-semibold tracking-tight text-white">
+              Info<span className="text-accent">{profile.brand.slice(4)}</span>
             </span>
-            <span className="font-mono text-[11px] tracking-[0.4em] text-slate-600 uppercase">
-              {profile.brand}
-            </span>
+            <motion.span
+              initial={{ scaleX: 0 }}
+              animate={{ scaleX: 1 }}
+              transition={{ duration: 0.7, ease: easeOut, delay: 0.2 }}
+              className="h-px w-16 origin-center bg-white/20"
+            />
           </motion.div>
         </motion.div>
       )}

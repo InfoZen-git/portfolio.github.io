@@ -25,7 +25,7 @@ const cardVariants = {
 function StatusBadge({ status }) {
   if (status === 'soon') {
     return (
-      <span className="inline-flex items-center gap-1.5 rounded-full border border-white/8 bg-white/[0.03] px-2.5 py-1 font-mono text-[10px] tracking-wider text-slate-500 uppercase">
+      <span className="inline-flex shrink-0 items-center gap-1.5 rounded-full border border-white/8 bg-white/[0.03] px-2.5 py-1 font-mono text-[10px] tracking-wider text-slate-500 uppercase">
         <Clock className="size-3" />
         Bientôt
       </span>
@@ -33,8 +33,8 @@ function StatusBadge({ status }) {
   }
 
   return (
-    <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-400/20 bg-emerald-400/10 px-2.5 py-1 font-mono text-[10px] tracking-wider text-emerald-400 uppercase">
-      <span className="size-1.5 rounded-full bg-emerald-400" />
+    <span className="inline-flex shrink-0 items-center gap-1.5 rounded-full border border-white/8 px-2.5 py-1 font-mono text-[10px] tracking-wider text-slate-400 uppercase">
+      <span className="size-1.5 rounded-full bg-success" />
       En ligne
     </span>
   )
@@ -60,8 +60,8 @@ export default function ProjectCard({ project, index = 0, className = '' }) {
         className={`flex h-full flex-col p-6 sm:p-7 ${isSoon ? 'border-dashed border-white/8' : ''}`}
       >
         <div className="flex items-start justify-between gap-4">
-          <div>
-            <p className="font-mono text-[11px] tracking-[0.2em] text-accent/70 uppercase">
+          <div className="min-w-0">
+            <p className="font-mono text-[11px] tracking-[0.2em] text-slate-500 uppercase">
               {project.kind}
             </p>
             <h3
@@ -128,7 +128,7 @@ export default function ProjectCard({ project, index = 0, className = '' }) {
                     target="_blank"
                     rel="noreferrer noopener"
                     whileHover={{ x: 2 }}
-                    className="group/link inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-sm font-medium text-slate-200 transition-colors duration-300 hover:border-accent/40 hover:text-accent"
+                    className="group/link inline-flex items-center gap-2 rounded-full border border-white/12 px-4 py-2 text-sm font-medium text-slate-300 transition-colors duration-300 hover:border-white/25 hover:text-white"
                   >
                     <Icon className="size-4" />
                     {link.label}
