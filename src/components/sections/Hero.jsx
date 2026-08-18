@@ -101,23 +101,23 @@ export default function Hero() {
           {profile.role}
         </motion.p>
 
-        <h1 className="font-display text-[clamp(3.5rem,15vw,9rem)] leading-[0.95] font-bold tracking-tight text-white">
-          <MaskedTitle text={profile.firstName} />
+        {/* La marque porte le titre, le prénom passe en signature discrète. */}
+        <h1 className="font-display text-[clamp(3rem,13vw,8.5rem)] leading-[0.95] font-bold tracking-tight text-white">
+          <MaskedTitle text={profile.brand} />
         </h1>
 
         <motion.p
           variants={{
-            hidden: { opacity: 0, scale: 0.96, filter: 'blur(8px)' },
+            hidden: { opacity: 0, y: 10 },
             show: {
               opacity: 1,
-              scale: 1,
-              filter: 'blur(0px)',
-              transition: { duration: 0.9, ease: easeOut, delay: INTRO_DELAY + 0.5 },
+              y: 0,
+              transition: { duration: 0.8, ease: easeOut, delay: INTRO_DELAY + 0.55 },
             },
           }}
-          className="mt-2 font-display text-2xl font-medium tracking-[0.35em] text-accent uppercase sm:text-3xl"
+          className="mt-4 font-mono text-[11px] tracking-[0.4em] text-slate-500 uppercase"
         >
-          {profile.brand}
+          by {profile.firstName}
         </motion.p>
 
         <motion.p
