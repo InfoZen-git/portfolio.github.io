@@ -136,39 +136,6 @@ export const projects = [
       { value: 'Wi-Fi 6', label: 'Archer AX3000' },
     ],
   },
-  {
-    id: 'soon-1',
-    title: 'Prochain outil',
-    kind: 'Outil',
-    status: 'soon',
-    span: 2,
-    summary:
-      "Quelque chose se prépare côté outils. Encore un peu de patience, ça arrive sur cette page dès que c'est prêt.",
-    tags: ['À venir'],
-    links: [],
-  },
-  {
-    id: 'soon-2',
-    title: "Terrain d'expérimentation",
-    kind: 'Homelab',
-    status: 'soon',
-    span: 2,
-    summary:
-      'Un emplacement libre pour la prochaine idée. Les meilleures naissent souvent en direct dans le homelab.',
-    tags: ['À venir'],
-    links: [],
-  },
-  {
-    id: 'soon-3',
-    title: 'Ton idée ici',
-    kind: 'Communauté',
-    status: 'soon',
-    span: 2,
-    summary:
-      "Une idée à proposer ? Le Discord est ouvert, et beaucoup de projets démarrent d'un simple message.",
-    tags: ['À venir'],
-    links: [],
-  },
 ]
 
 /**

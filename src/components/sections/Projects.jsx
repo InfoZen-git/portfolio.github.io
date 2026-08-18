@@ -20,7 +20,7 @@ export default function Projects() {
         index="02"
         eyebrow="Projets"
         title="Ce que je construis quand la caméra est éteinte"
-        description="Des outils publics, une infra maison, et de la place pour la suite."
+        description="Un outil open source que tout le monde peut télécharger, et l'infrastructure sur laquelle je casse et je répare tous les jours."
       />
 
       <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-6">
