@@ -4,11 +4,13 @@ import ProjectCard from './ProjectCard'
 import { projects } from '../../data/site'
 
 /**
- * Grille de 6 colonnes : les projets mis en avant occupent une demi-largeur,
- * les autres un tiers. Ajouter un projet dans src/data/site.js suffit.
+ * Grille de 6 colonnes. La largeur de chaque carte vient du champ `span`
+ * de src/data/site.js : 6 pour pleine largeur, 3 pour une moitié, 2 pour un tiers.
  */
-function spanFor(project) {
-  return project.featured ? 'lg:col-span-3' : 'lg:col-span-2'
+const spans = {
+  2: 'lg:col-span-2',
+  3: 'lg:col-span-3',
+  6: 'lg:col-span-6',
 }
 
 export default function Projects() {
@@ -27,7 +29,7 @@ export default function Projects() {
             key={project.id}
             project={project}
             index={index}
-            className={spanFor(project)}
+            className={spans[project.span] ?? spans[3]}
           />
         ))}
       </div>

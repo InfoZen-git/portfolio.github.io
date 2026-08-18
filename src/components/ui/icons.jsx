@@ -1,12 +1,18 @@
 import {
   ArrowRight,
   ArrowUpRight,
+  Briefcase,
+  Calculator,
   Code2,
+  Cpu,
   Mail,
   MapPin,
+  Nfc,
+  Rocket,
   Server,
   Sparkles,
   Video,
+  Wrench,
 } from 'lucide-react'
 
 /** Icône de marque générique : un seul <path> dans une viewBox 24. */
@@ -59,6 +65,12 @@ export const icons = {
   video: Video,
   code: Code2,
   server: Server,
+  briefcase: Briefcase,
+  rocket: Rocket,
+  calculator: Calculator,
+  wrench: Wrench,
+  nfc: Nfc,
+  cpu: Cpu,
   sparkles: Sparkles,
   location: MapPin,
   arrowRight: ArrowRight,

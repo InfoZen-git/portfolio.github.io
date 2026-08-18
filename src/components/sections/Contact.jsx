@@ -16,7 +16,7 @@ export default function Contact() {
 
         <div className="relative">
           <SectionHeading
-            index="04"
+            index="05"
             eyebrow="Contact"
             title={contact.heading}
             description={contact.description}

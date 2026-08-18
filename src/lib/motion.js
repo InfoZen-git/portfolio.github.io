@@ -3,7 +3,7 @@
  * Centralisées ici pour garder une signature d'animation cohérente sur tout le site.
  */
 
-/** Courbe "expo out" — départ franc, arrivée très douce. */
+/** Courbe "expo out" : départ franc, arrivée très douce. */
 export const easeOut = [0.16, 1, 0.3, 1]
 
 /**

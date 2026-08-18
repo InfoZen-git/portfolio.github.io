@@ -5,6 +5,7 @@ import ScrollProgress from './components/layout/ScrollProgress'
 import Hero from './components/sections/Hero'
 import About from './components/sections/About'
 import Projects from './components/sections/Projects'
+import Business from './components/sections/Business'
 import Content from './components/sections/Content'
 import Contact from './components/sections/Contact'
 
@@ -26,6 +27,7 @@ export default function App() {
 
         <About />
         <Projects />
+        <Business />
         <Content />
         <Contact />
       </main>

@@ -21,7 +21,7 @@ export default function Content() {
   return (
     <Section id="content">
       <SectionHeading
-        index="03"
+        index="04"
         eyebrow="Contenu"
         title="Où me suivre au quotidien"
         description="Des astuces tech courtes, des tutos plus poussés et une communauté pour en discuter."

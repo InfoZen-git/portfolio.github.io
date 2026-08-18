@@ -1,7 +1,7 @@
-# Portfolio — Octave / InfoZen
+# Portfolio · Octave / InfoZen
 
-Site portfolio personnel d'Octave (**InfoZen**) : créateur de contenu tech, développeur
-et passionné de homelab.
+Site portfolio personnel d'Octave (**InfoZen**) : créateur de contenu tech,
+développeur, passionné de homelab et entrepreneur.
 
 Thème sombre, accent cyan / bleu électrique, animations Framer Motion partout
 (entrée de page, révélations au scroll, halo qui suit le curseur, cascades).
@@ -36,19 +36,22 @@ src/
 └── components/
     ├── background/           ← particules, dégradés animés, grille
     ├── layout/               ← navbar, footer, barre de progression, rideau d'entrée
-    ├── sections/             ← Hero, About, Projects, Content, Contact
+    ├── sections/             ← Hero, About, Projects, Business, Content, Contact
     │   └── visuals/          ← illustrations animées des cartes projet
     └── ui/                   ← Section, Reveal, SpotlightCard, Terminal…
 ```
 
 ## Modifier le contenu
 
-Tout passe par **`src/data/site.js`** — aucun texte n'est écrit en dur dans les
+Tout passe par **`src/data/site.js`**, aucun texte n'est écrit en dur dans les
 composants.
 
 - **Ajouter un projet** : une entrée dans `projects`.
-  `featured: true` lui donne une demi-largeur sur grand écran, sinon un tiers.
+  Le champ `span` fixe sa largeur sur la grille de 6 colonnes : `6` pleine
+  largeur, `3` une moitié, `2` un tiers.
   `status: 'soon'` affiche la carte en pointillés avec le badge « Bientôt ».
+- **Ajouter un business** : une entrée dans `ventures`, avec son `status`
+  (`active`, `soon` ou `past`) et son `span`.
 - **Ajouter un réseau** : une entrée dans `channels` (section Contenu) et/ou
   `socials` (hero, contact, footer).
 - **Icônes** : les champs `icon` sont des clés du registre
@@ -60,8 +63,8 @@ Le champ `visual` d'un projet référence un composant de
 `src/components/sections/visuals/`, enregistré dans l'objet `visuals` de
 `ProjectCard.jsx` :
 
-- `checklist` — liste à cocher animée, alimentée par le tableau `features`
-- `topology` — schéma réseau animé du homelab
+- `checklist` : liste à cocher animée, alimentée par le tableau `features`
+- `architecture` : schéma animé du homelab (SVG sur desktop, liste sur mobile)
 
 ## Personnaliser le thème
 
@@ -78,9 +81,11 @@ tout le site.
 
 ## À compléter
 
-Quelques valeurs sont des espaces réservés, marquées `TODO` dans
+Deux valeurs restent des espaces réservés, marquées `TODO` dans
 `src/data/site.js` :
 
-- `profile.email` — adresse de contact publique
 - le lien d'invitation Discord
 - le handle exact de la chaîne YouTube
+
+Le champ `status` de chaque entrée du tableau `ventures` est à ajuster selon la
+réalité du moment : `active`, `soon` ou `past`.

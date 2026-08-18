@@ -16,7 +16,7 @@ export default function About() {
         index="01"
         eyebrow="À propos"
         title={about.heading}
-        description="Créer, coder, héberger : trois façons de faire la même chose — comprendre la tech et la rendre accessible."
+        description="Créer, coder, héberger, entreprendre : quatre façons de faire la même chose, comprendre la tech et la rendre accessible."
       />
 
       <div className="mt-14 grid gap-10 lg:grid-cols-12 lg:gap-14">
@@ -60,7 +60,7 @@ export default function About() {
         whileInView="show"
         viewport={viewportOnce}
         variants={stagger(0.12, 0.05)}
-        className="mt-14 grid gap-4 sm:grid-cols-3"
+        className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-4"
       >
         {about.pillars.map((pillar) => {
           const Icon = getIcon(pillar.icon)

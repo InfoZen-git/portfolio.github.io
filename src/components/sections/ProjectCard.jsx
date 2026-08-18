@@ -2,13 +2,13 @@ import { motion } from 'framer-motion'
 import { ArrowUpRight, Clock } from 'lucide-react'
 import SpotlightCard from '../ui/SpotlightCard'
 import { getIcon } from '../ui/icons'
-import NetworkTopology from './visuals/NetworkTopology'
+import HomelabArchitecture from './visuals/HomelabArchitecture'
 import FeatureChecklist from './visuals/FeatureChecklist'
 import { easeOut, viewportOnce } from '../../lib/motion'
 
 /** Visuels optionnels, référencés par la clé `visual` d'un projet. */
 const visuals = {
-  topology: () => <NetworkTopology />,
+  architecture: () => <HomelabArchitecture />,
   checklist: ({ project }) => <FeatureChecklist items={project.features} />,
 }
 

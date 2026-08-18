@@ -16,7 +16,7 @@ export default function Footer() {
       >
         <div className="flex flex-col items-center gap-1 sm:items-start">
           <span className="font-display text-sm font-semibold text-slate-300">
-            {profile.firstName} — {profile.brand}
+            {profile.firstName} · {profile.brand}
           </span>
           <span className="font-mono text-xs text-slate-600">
             © {new Date().getFullYear()} · Conçu et développé en {profile.location}
