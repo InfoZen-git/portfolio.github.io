@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "description": "Portfolio personnel d'Octave — InfoZen",
+  "description": "Portfolio personnel d'Octave, InfoZen",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

@@ -16,14 +16,24 @@ Thème sombre, accent cyan / bleu électrique, animations Framer Motion partout
 | Framer Motion 13       | Toutes les animations                      |
 | lucide-react           | Icônes d'interface                         |
 
-## Démarrer
+## Voir le site
+
+Le dépôt ne contient que le code source : rien n'est visible tant que le site
+n'est pas lancé ou déployé.
+
+**En local :**
 
 ```bash
 npm install
-npm run dev      # serveur de développement
+npm run dev      # serveur de développement, http://localhost:5173
 npm run build    # build de production dans dist/
 npm run preview  # prévisualise le build
 ```
+
+**En ligne :** le workflow `.github/workflows/deploy.yml` publie le site sur
+GitHub Pages à chaque push. Pour l'activer, une seule chose à faire dans
+l'interface GitHub : `Settings` › `Pages` › `Source` › **GitHub Actions**.
+Le site est ensuite servi sur `https://infozen-git.github.io/Portfolio/`.
 
 ## Structure
 
