@@ -114,14 +114,35 @@ rendu sobre d'un rendu criard.
 | `--color-hairline`    | Séparateurs                             |
 | `--color-accent`      | Accent, par petites touches uniquement  |
 | `--color-accent-deep` | Variante sombre du même bleu            |
+| `--color-muted`       | Texte tertiaire (le plus sombre lisible) |
 | `--color-success`     | Statut « en ligne » et « en cours »     |
 
+Échelle de texte, du plus fort au plus discret : `text-white`, `text-slate-300`,
+`text-slate-400`, `text-muted`. Ne pas descendre sous `text-muted` pour du
+texte : `slate-500` tombe à 4,11:1 et `slate-600` à 2,58:1 sur le fond de page,
+tous deux sous le seuil de 4,5:1.
+
 ## Accessibilité et performance
+
+Mesuré dans Chromium à 1440px et 390px, après déroulement complet de la page :
+
+| Contrôle                          | Résultat            |
+| --------------------------------- | ------------------- |
+| Contraste du texte (seuil 4,5:1)  | 0 échec             |
+| Cibles tactiles (seuil 44×44)     | 0 échec             |
+| Contrôles sans nom accessible     | 0                   |
+| Texte sous 12px                   | 0                   |
+| Défilement horizontal             | 0px                 |
+| CLS (seuil 0,1)                   | 0,000               |
+| Animations infinies en `reduce`   | 0                   |
 
 - `prefers-reduced-motion` est respecté partout : le rideau d'entrée est ignoré,
   les particules deviennent statiques et les boucles infinies sont coupées.
 - Le canvas de particules se met en pause quand l'onglet passe en arrière-plan.
 - Navigation au clavier avec anneaux de focus visibles.
+- Toute la palette Tailwind est servie en `oklch` : un contrôle de contraste
+  écrit avec une regex `rgb()` ignore silencieusement la quasi-totalité des
+  couleurs. Résoudre la couleur via un canvas avant de calculer un ratio.
 
 ## À compléter
 

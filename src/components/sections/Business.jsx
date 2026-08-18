@@ -25,7 +25,7 @@ const statuses = {
   },
   past: {
     label: 'Terminé',
-    className: 'border-white/8 text-slate-600',
+    className: 'border-white/8 text-muted',
     dot: 'bg-slate-600',
   },
 }
@@ -63,14 +63,14 @@ function VentureCard({ venture, index }) {
           </motion.span>
 
           <span
-            className={`inline-flex shrink-0 items-center gap-1.5 rounded-full border px-2.5 py-1 font-mono text-[10px] tracking-wider uppercase ${status.className}`}
+            className={`inline-flex shrink-0 items-center gap-1.5 rounded-full border px-2.5 py-1 font-mono text-xs tracking-wider uppercase ${status.className}`}
           >
             <span className={`size-1.5 rounded-full ${status.dot}`} />
             {status.label}
           </span>
         </div>
 
-        <p className="mt-5 font-mono text-[11px] tracking-[0.2em] text-slate-500 uppercase">
+        <p className="mt-5 font-mono text-xs tracking-[0.2em] text-muted uppercase">
           {venture.kind}
         </p>
         <h3 className="mt-2 font-display text-lg font-semibold text-white text-balance sm:text-xl">
@@ -82,7 +82,7 @@ function VentureCard({ venture, index }) {
           {venture.tags.map((tag) => (
             <li
               key={tag}
-              className="rounded-md border border-white/6 bg-white/[0.03] px-2.5 py-1 font-mono text-[11px] text-slate-500"
+              className="rounded-md border border-white/6 bg-white/[0.03] px-2.5 py-1 font-mono text-xs text-muted"
             >
               {tag}
             </li>

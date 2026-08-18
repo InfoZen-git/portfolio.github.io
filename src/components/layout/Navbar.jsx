@@ -33,7 +33,7 @@ export default function Navbar() {
           {/* Simple signature typographique : pas de bloc logo. */}
           <a
             href="#hero"
-            className="font-display text-[15px] font-semibold tracking-tight text-white transition-colors duration-300 hover:text-slate-300"
+            className="-my-3 py-3 font-display text-[15px] font-semibold tracking-tight text-white transition-colors duration-300 hover:text-slate-300"
           >
             Info<span className="text-accent">Zen</span>
           </a>
@@ -43,7 +43,7 @@ export default function Navbar() {
               <li key={item.id}>
                 <a
                   href={`#${item.id}`}
-                  className={`relative block rounded-full px-3.5 py-1.5 text-sm transition-colors duration-300 ${
+                  className={`relative block rounded-full px-3.5 py-3 text-sm transition-colors duration-300 ${
                     active === item.id ? 'text-white' : 'text-slate-400 hover:text-slate-200'
                   }`}
                 >
@@ -65,7 +65,7 @@ export default function Navbar() {
               href="#contact"
               whileHover={{ scale: 1.04 }}
               whileTap={{ scale: 0.96 }}
-              className="hidden rounded-full border border-white/12 px-4 py-1.5 text-sm font-medium text-slate-300 transition-colors duration-300 hover:border-white/25 hover:text-white sm:block"
+              className="hidden rounded-full border border-white/12 px-4 py-3 text-sm font-medium text-slate-300 transition-colors duration-300 hover:border-white/25 hover:text-white sm:block"
             >
               Me contacter
             </motion.a>
@@ -75,7 +75,7 @@ export default function Navbar() {
               onClick={() => setMenuOpen((open) => !open)}
               aria-label={menuOpen ? 'Fermer le menu' : 'Ouvrir le menu'}
               aria-expanded={menuOpen}
-              className="flex size-9 items-center justify-center rounded-full border border-white/10 bg-white/5 text-slate-300 md:hidden"
+              className="flex size-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-slate-300 md:hidden"
             >
               <AnimatePresence mode="wait" initial={false}>
                 <motion.span

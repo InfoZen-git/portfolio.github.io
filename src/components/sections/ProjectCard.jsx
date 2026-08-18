@@ -25,7 +25,7 @@ const cardVariants = {
 function StatusBadge({ status }) {
   if (status === 'soon') {
     return (
-      <span className="inline-flex shrink-0 items-center gap-1.5 rounded-full border border-white/8 bg-white/[0.03] px-2.5 py-1 font-mono text-[10px] tracking-wider text-slate-500 uppercase">
+      <span className="inline-flex shrink-0 items-center gap-1.5 rounded-full border border-white/8 bg-white/[0.03] px-2.5 py-1 font-mono text-xs tracking-wider text-muted uppercase">
         <Clock className="size-3" />
         Bientôt
       </span>
@@ -33,7 +33,7 @@ function StatusBadge({ status }) {
   }
 
   return (
-    <span className="inline-flex shrink-0 items-center gap-1.5 rounded-full border border-white/8 px-2.5 py-1 font-mono text-[10px] tracking-wider text-slate-400 uppercase">
+    <span className="inline-flex shrink-0 items-center gap-1.5 rounded-full border border-white/8 px-2.5 py-1 font-mono text-xs tracking-wider text-slate-400 uppercase">
       <span className="size-1.5 rounded-full bg-success" />
       En ligne
     </span>
@@ -61,12 +61,12 @@ export default function ProjectCard({ project, index = 0, className = '' }) {
       >
         <div className="flex items-start justify-between gap-4">
           <div className="min-w-0">
-            <p className="font-mono text-[11px] tracking-[0.2em] text-slate-500 uppercase">
+            <p className="font-mono text-xs tracking-[0.2em] text-muted uppercase">
               {project.kind}
             </p>
             <h3
               className={`mt-2 font-display text-xl font-semibold sm:text-2xl ${
-                isSoon ? 'text-slate-500' : 'text-white'
+                isSoon ? 'text-muted' : 'text-white'
               }`}
             >
               {project.title}
@@ -94,7 +94,7 @@ export default function ProjectCard({ project, index = 0, className = '' }) {
                 transition={{ duration: 0.5, ease: easeOut, delay: 0.1 * index }}
                 className="min-w-[6.5rem] flex-1 rounded-lg border border-white/5 bg-white/[0.02] px-3 py-2.5"
               >
-                <dt className="font-mono text-[10px] tracking-wider text-slate-600 uppercase">
+                <dt className="font-mono text-xs tracking-wider text-muted uppercase">
                   {highlight.label}
                 </dt>
                 <dd className="mt-0.5 font-display text-sm font-semibold text-slate-200">
@@ -110,7 +110,7 @@ export default function ProjectCard({ project, index = 0, className = '' }) {
             {project.tags.map((tag) => (
               <li
                 key={tag}
-                className="rounded-md border border-white/6 bg-white/[0.03] px-2.5 py-1 font-mono text-[11px] text-slate-500"
+                className="rounded-md border border-white/6 bg-white/[0.03] px-2.5 py-1 font-mono text-xs text-muted"
               >
                 {tag}
               </li>
@@ -128,7 +128,7 @@ export default function ProjectCard({ project, index = 0, className = '' }) {
                     target="_blank"
                     rel="noreferrer noopener"
                     whileHover={{ x: 2 }}
-                    className="group/link inline-flex items-center gap-2 rounded-full border border-white/12 px-4 py-2 text-sm font-medium text-slate-300 transition-colors duration-300 hover:border-white/25 hover:text-white"
+                    className="group/link inline-flex items-center gap-2 rounded-full border border-white/12 px-4 py-3 text-sm font-medium text-slate-300 transition-colors duration-300 hover:border-white/25 hover:text-white"
                   >
                     <Icon className="size-4" />
                     {link.label}

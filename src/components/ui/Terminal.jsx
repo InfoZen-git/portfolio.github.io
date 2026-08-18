@@ -51,7 +51,7 @@ export default function Terminal({ title = 'octave@infozen', lines = [], classNa
         <span className="size-3 rounded-full bg-white/15" />
         <span className="size-3 rounded-full bg-white/15" />
         <span className="size-3 rounded-full bg-white/15" />
-        <span className="ml-2 font-mono text-xs text-slate-500">{title}</span>
+        <span className="ml-2 font-mono text-xs text-muted">{title}</span>
       </div>
 
       <motion.div
@@ -68,12 +68,12 @@ export default function Terminal({ title = 'octave@infozen', lines = [], classNa
               variants={lineVariants}
               className="flex flex-wrap items-baseline gap-x-2"
             >
-              <span className="text-slate-600">$</span>
+              <span className="text-muted">$</span>
               <span className="text-accent/80">{line.prompt}</span>
               <TypedText text={line.command} className="text-slate-200" />
             </motion.p>
           ) : (
-            <motion.p key={index} variants={outputVariants} className="pl-6 text-slate-500">
+            <motion.p key={index} variants={outputVariants} className="pl-6 text-muted">
               {line.output}
             </motion.p>
           ),

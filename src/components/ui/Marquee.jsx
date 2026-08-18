@@ -20,7 +20,7 @@ export default function Marquee({ items, speed = 38, className = '' }) {
               <li
                 key={logo.title}
                 title={logo.title}
-                className="flex size-14 items-center justify-center rounded-xl border border-white/8 bg-panel/60 text-slate-500 transition-all duration-300 hover:-translate-y-1 hover:border-white/20 hover:text-slate-100"
+                className="flex size-14 items-center justify-center rounded-xl border border-white/8 bg-panel/60 text-slate-400 transition-all duration-300 hover:-translate-y-1 hover:border-white/20 hover:text-slate-100"
               >
                 <svg
                   viewBox="0 0 24 24"

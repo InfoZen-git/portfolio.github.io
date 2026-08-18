@@ -60,13 +60,13 @@ export default function Content() {
                       <Icon className="size-5" />
                     </motion.span>
 
-                    <ArrowUpRight className="size-5 text-slate-600 transition-all duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-slate-300" />
+                    <ArrowUpRight className="size-5 text-muted transition-all duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-slate-300" />
                   </div>
 
                   <h3 className="mt-5 font-display text-lg font-semibold text-white">
                     {channel.name}
                   </h3>
-                  <p className="mt-1 font-mono text-xs tracking-wide text-slate-500">
+                  <p className="mt-1 font-mono text-xs tracking-wide text-muted">
                     {channel.handle}
                   </p>
                   <p className="mt-3 text-sm leading-relaxed text-slate-400">

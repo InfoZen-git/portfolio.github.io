@@ -18,7 +18,7 @@ export default function Footer() {
           <span className="font-display text-sm font-semibold text-slate-300">
             {profile.firstName} · {profile.brand}
           </span>
-          <span className="font-mono text-xs text-slate-600">
+          <span className="font-mono text-xs text-muted">
             © {new Date().getFullYear()} · Conçu et développé en {profile.location}
           </span>
         </div>
@@ -34,7 +34,7 @@ export default function Footer() {
                   rel="noreferrer noopener"
                   aria-label={social.label}
                   whileHover={{ y: -3 }}
-                  className="flex size-9 items-center justify-center rounded-lg text-slate-600 transition-colors duration-300 hover:text-accent"
+                  className="flex size-11 items-center justify-center rounded-lg text-slate-400 transition-colors duration-300 hover:text-accent"
                 >
                   <Icon className="size-4" />
                 </motion.a>
@@ -47,7 +47,7 @@ export default function Footer() {
               href="#hero"
               aria-label="Remonter en haut de page"
               whileHover={{ y: -3 }}
-              className="ml-2 flex size-9 items-center justify-center rounded-lg border border-white/8 text-slate-500 transition-colors duration-300 hover:border-accent/40 hover:text-accent"
+              className="ml-2 flex size-11 items-center justify-center rounded-lg border border-white/8 text-slate-400 transition-colors duration-300 hover:border-accent/40 hover:text-accent"
             >
               <ArrowUp className="size-4" />
             </motion.a>

@@ -45,7 +45,7 @@ export default function Contact() {
                 aria-hidden="true"
                 className="h-px w-10 bg-gradient-to-r from-transparent to-white/15"
               />
-              <span className="font-mono text-[11px] tracking-[0.25em] text-slate-600 uppercase">
+              <span className="font-mono text-xs tracking-[0.25em] text-muted uppercase">
                 ou ailleurs
               </span>
               <span
@@ -73,7 +73,7 @@ export default function Contact() {
                     <MagneticButton
                       href={social.href}
                       strength={0.25}
-                      className="group inline-flex items-center gap-2.5 rounded-full border border-white/8 px-5 py-2.5 text-sm text-slate-400 transition-colors duration-300 hover:border-white/20 hover:text-slate-100"
+                      className="group inline-flex items-center gap-2.5 min-h-11 rounded-full border border-white/8 px-5 py-3 text-sm text-slate-400 transition-colors duration-300 hover:border-white/20 hover:text-slate-100"
                     >
                       <Icon className="size-4" />
                       {social.label}

@@ -96,7 +96,7 @@ export default function Hero() {
             hidden: { opacity: 0, y: 14 },
             show: { opacity: 1, y: 0, transition: { duration: 0.7, ease: easeOut } },
           }}
-          className="mb-5 font-mono text-xs tracking-[0.3em] text-slate-500 uppercase sm:text-sm"
+          className="mb-5 font-mono text-xs tracking-[0.3em] text-muted uppercase sm:text-sm"
         >
           {profile.role}
         </motion.p>
@@ -115,7 +115,7 @@ export default function Hero() {
               transition: { duration: 0.8, ease: easeOut, delay: INTRO_DELAY + 0.55 },
             },
           }}
-          className="mt-4 font-mono text-[11px] tracking-[0.4em] text-slate-500 uppercase"
+          className="mt-4 font-mono text-xs tracking-[0.4em] text-muted uppercase"
         >
           by {profile.firstName}
         </motion.p>
@@ -185,7 +185,7 @@ export default function Hero() {
                   whileHover={{ y: -4, scale: 1.1 }}
                   whileTap={{ scale: 0.94 }}
                   transition={{ type: 'spring', stiffness: 400, damping: 18 }}
-                  className="flex size-10 items-center justify-center rounded-full border border-white/8 text-slate-500 transition-colors duration-300 hover:border-white/20 hover:text-slate-200"
+                  className="flex size-11 items-center justify-center rounded-full border border-white/8 text-slate-400 transition-colors duration-300 hover:border-white/20 hover:text-slate-200"
                 >
                   <Icon className="size-4" />
                 </motion.a>
@@ -206,14 +206,14 @@ export default function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: INTRO_DELAY + 1.5, duration: 0.8 }}
-          className="block text-slate-600 transition-colors duration-300 hover:text-slate-300"
+          className="block p-2 text-muted transition-colors duration-300 hover:text-slate-300"
         >
           <motion.span
             animate={reduceMotion ? undefined : { y: [0, 8, 0] }}
             transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
             className="flex flex-col items-center gap-2"
           >
-            <span className="font-mono text-[10px] tracking-[0.25em] uppercase">Scroll</span>
+            <span className="font-mono text-xs tracking-[0.25em] uppercase">Scroll</span>
             <ArrowDown className="size-4" />
           </motion.span>
         </motion.a>

@@ -100,7 +100,7 @@ export default function About() {
 
       {/* Stack */}
       <Reveal delay={0.1} className="mt-10">
-        <p className="mb-4 font-mono text-xs tracking-[0.25em] text-slate-600 uppercase">
+        <p className="mb-4 font-mono text-xs tracking-[0.25em] text-muted uppercase">
           Ce que j'utilise
         </p>
         <Marquee items={about.stack} />

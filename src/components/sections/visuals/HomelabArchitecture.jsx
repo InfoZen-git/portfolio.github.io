@@ -177,7 +177,7 @@ function GroupList() {
           className="rounded-xl border border-white/6 bg-white/[0.02] p-4"
         >
           <p className="font-display text-sm font-semibold text-slate-200">{group.title}</p>
-          <p className="mt-0.5 font-mono text-[11px] text-slate-500">{group.subtitle}</p>
+          <p className="mt-0.5 font-mono text-xs text-muted">{group.subtitle}</p>
 
           <ul className="mt-3 flex flex-wrap gap-1.5">
             {group.items.map((item, itemIndex) => (
@@ -187,7 +187,7 @@ function GroupList() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={viewportOnce}
                 transition={{ duration: 0.35, ease: easeOut, delay: 0.1 * index + 0.05 * itemIndex }}
-                className="rounded-md border border-white/6 bg-panel/60 px-2 py-1 font-mono text-[11px] text-slate-400"
+                className="rounded-md border border-white/6 bg-panel/60 px-2 py-1 font-mono text-xs text-slate-400"
               >
                 {item}
               </motion.li>

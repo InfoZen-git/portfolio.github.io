@@ -15,6 +15,9 @@
   --color-accent-soft: #a5c2dc;
   --color-accent-deep: #3d5a78;
 
+  /* Texte tertiaire : le plus sombre qui tienne 4.5:1 sur --color-void */
+  --color-muted: #7d8794;
+
   /* Sémantique */
   --color-success: #6ea583;
 

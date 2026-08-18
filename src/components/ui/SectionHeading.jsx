@@ -19,7 +19,7 @@ export default function SectionHeading({ index, eyebrow, title, description, ali
         {index && (
           <span className="font-mono text-xs tracking-[0.25em] text-accent">{index}</span>
         )}
-        <span className="text-xs font-medium tracking-[0.25em] text-slate-500 uppercase">
+        <span className="text-xs font-medium tracking-[0.25em] text-muted uppercase">
           {eyebrow}
         </span>
         <motion.span
