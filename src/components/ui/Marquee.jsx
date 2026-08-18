@@ -1,8 +1,13 @@
+import { techIcons } from './techIcons'
+
 /**
- * Défilement infini horizontal.
+ * Bande de logos défilant à l'infini.
  * La liste est dupliquée puis translatée de -50% : la boucle est invisible.
+ * Les clés inconnues sont ignorées plutôt que de casser le rendu.
  */
 export default function Marquee({ items, speed = 38, className = '' }) {
+  const logos = items.map((key) => techIcons[key]).filter(Boolean)
+
   return (
     <div className={`mask-fade-x group relative overflow-hidden ${className}`}>
       <div
@@ -11,12 +16,22 @@ export default function Marquee({ items, speed = 38, className = '' }) {
       >
         {[0, 1].map((copy) => (
           <ul key={copy} aria-hidden={copy === 1} className="flex shrink-0 gap-3 pr-3">
-            {items.map((item) => (
+            {logos.map((logo) => (
               <li
-                key={item}
-                className="rounded-full border border-white/8 bg-panel/60 px-4 py-2 font-mono text-xs whitespace-nowrap text-slate-400 transition-colors duration-300 hover:border-white/20 hover:text-slate-200"
+                key={logo.title}
+                title={logo.title}
+                className="flex size-14 items-center justify-center rounded-xl border border-white/8 bg-panel/60 text-slate-500 transition-all duration-300 hover:-translate-y-1 hover:border-white/20 hover:text-slate-100"
               >
-                {item}
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  role="img"
+                  aria-label={logo.title}
+                  className="size-6"
+                >
+                  <title>{logo.title}</title>
+                  <path d={logo.path} />
+                </svg>
               </li>
             ))}
           </ul>

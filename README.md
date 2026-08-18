@@ -74,8 +74,16 @@ composants.
   (`active`, `soon` ou `past`) et son `span`.
 - **Ajouter un réseau** : une entrée dans `channels` (section Contenu) et/ou
   `socials` (hero, contact, footer).
-- **Icônes** : les champs `icon` sont des clés du registre
+- **Icônes d'interface** : les champs `icon` sont des clés du registre
   `src/components/ui/icons.jsx`. Pour en ajouter une, complète l'objet `icons`.
+- **Logos de la bande « Ce que j'utilise »** : le tableau `about.stack` contient
+  des clés du registre `src/components/ui/techIcons.js`. Pour ajouter une
+  technologie, copie son champ `path` depuis simpleicons.org dans `techIcons`,
+  puis référence sa clé dans `about.stack`.
+
+  Les tracés viennent de simple-icons (licence CC0). Le paquet ne distribue plus
+  les marques Microsoft : Windows est donc un glyphe géométrique dessiné à la
+  main, et C# est représenté par le logo .NET.
 
 ### Illustrations des cartes projet
 
