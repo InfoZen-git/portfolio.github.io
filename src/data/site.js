@@ -33,7 +33,7 @@ export const about = {
     "Je m'appelle Octave, et sous le nom d'InfoZen je partage des astuces tech au quotidien : optimisation, sécurité, logiciels, réseau. Le genre de contenu que j'aurais aimé trouver quand j'ai commencé.",
     "En parallèle, je développe. Quand une astuce mérite mieux qu'une vidéo de 60 secondes, j'en fais un outil, et c'est comme ça qu'est né Klyr-optimizer, un optimiseur Windows open source.",
     "Pour comprendre vraiment l'infra, rien ne vaut la pratique : j'auto-héberge un homelab complet, du routeur jusqu'aux conteneurs Docker, en passant par un modèle IA local et un dashboard sur Arduino. Je casse, je répare, j'explique.",
-    "Et tout ça finit par servir : dépannage, développement pour des clients, revente de matériel, produits pour les commerçants du coin. La tech, quand elle est bien comprise, ça devient une activité.",
+    "Et tout ça finit par servir : dépannage, revente de matériel, produits pour les commerçants du coin. La tech, quand elle est bien comprise, ça devient une activité.",
   ],
   pillars: [
     {
@@ -58,7 +58,7 @@ export const about = {
       icon: 'briefcase',
       title: 'Entrepreneur',
       description:
-        'Des activités concrètes autour de la tech : prestation, développement client, revente, produits locaux.',
+        'Des activités concrètes autour de la tech : prestation, revente, produits locaux et un SaaS en route.',
     },
   ],
   // Clés du registre de logos défini dans src/components/ui/techIcons.jsx
@@ -253,21 +253,10 @@ export const ventures = [
     title: 'Projet SaaS',
     kind: 'Produit',
     status: 'soon',
-    span: 2,
+    span: 3,
     summary:
       "Le gros morceau du moment. Un SaaS en cours de construction, encore confidentiel, sur lequel passe l'essentiel de mon temps de développement.",
     tags: ['SaaS', 'En construction'],
-  },
-  {
-    id: 'renovatio',
-    icon: 'calculator',
-    title: 'Application de comptabilité',
-    kind: 'Développement client',
-    status: 'active',
-    span: 2,
-    summary:
-      "Une application de compta développée sur mesure pour Renovatio68, pensée pour leur façon de travailler plutôt que pour un logiciel générique.",
-    tags: ['Client', 'Sur mesure', 'Compta'],
   },
   {
     id: 'depannage',
@@ -275,7 +264,7 @@ export const ventures = [
     title: 'Dépannage et assistance informatique',
     kind: 'Prestation',
     status: 'active',
-    span: 2,
+    span: 3,
     summary:
       "Diagnostic, réparation, nettoyage, installation, configuration réseau. J'interviens chez les particuliers et les petites structures, avec l'explication qui va avec.",
     tags: ['Particuliers', 'TPE', 'Réseau'],

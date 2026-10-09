@@ -100,7 +100,7 @@ export default function Business() {
         index="03"
         eyebrow="Business"
         title="Quand la tech devient une activité"
-        description="Ce que j'ai lancé, testé et fais tourner aujourd'hui, de la prestation locale au développement pour des clients."
+        description="Ce que j'ai lancé, testé et fais tourner aujourd'hui, de la prestation locale au produit SaaS."
       />
 
       <ul className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-6">
